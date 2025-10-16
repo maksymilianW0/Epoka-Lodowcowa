@@ -1,0 +1,3 @@
+Muszę ogarnąć dźwięki dla kroków gracza oraz skakania i lądowania.
+Może jeszcze kilka fajnych losowych efektów dźwiękowych jak oddech.
+Zrobić system temperatury ciała.

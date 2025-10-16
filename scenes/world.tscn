@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmqec66oj5dl6"]
+
+[ext_resource type="Script" uid="uid://bymw2bwtwpwln" path="res://scripts/player/PlayerMovement.gd" id="1_rwgxs"]
+[ext_resource type="AudioStream" uid="uid://dgoth737rdi2o" path="res://sounds/player/footsteps/SnowyFootstep.wav" id="2_4wyf3"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_go701"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a02cp"]
+size = Vector3(0.8876953, 0.19918823, 1.0770111)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a02cp"]
+
+[node name="World" type="Node3D"]
+
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.183939, 0)
+script = ExtResource("1_rwgxs")
+footstep_sounds = Array[AudioStream]([ExtResource("2_4wyf3")])
+
+[node name="PlayerCamera" type="Camera3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7338482, 0)
+
+[node name="PlayerBody" type="CollisionShape3D" parent="Player"]
+shape = SubResource("CapsuleShape3D_go701")
+
+[node name="PlayerAudio" type="AudioStreamPlayer3D" parent="Player"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -0.0024414063, 1.9826508, 0.001411438)
+shape = SubResource("BoxShape3D_a02cp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(4.434766, 0, 0, 0, 1, 0, 0, 0, 5.3689346, 0, 1.9717824, 0)
+mesh = SubResource("BoxMesh_a02cp")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.41431206, 0.9101349, 0, -0.9101349, 0.41431206, 0, 0, 0)
