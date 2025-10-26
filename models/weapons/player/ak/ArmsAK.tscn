@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://l2wbgs6a4hhb"]
+
+[ext_resource type="PackedScene" uid="uid://cy7h25ck4p63x" path="res://models/glb/weapons/player/ak/ArmsAK.glb" id="1_caudx"]
+
+[node name="Root Scene" instance=ExtResource("1_caudx")]
+
+[node name="Skeleton3D" parent="RootNode/Armature" index="0"]
+bones/0/rotation = Quaternion(-0.5755557, -0.32301983, -0.47801304, 0.5795667)
+bones/1/rotation = Quaternion(-0.19682497, -0.02885959, -0.3545808, 0.913619)
+bones/11/rotation = Quaternion(0.011236382, -0.18645272, 0.17904963, 0.96594536)
+bones/24/position = Vector3(-0.0031443771, -0.0050483434, 0.004178853)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="2"]

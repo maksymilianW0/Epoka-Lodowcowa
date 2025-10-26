@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://bmqec66oj5dl6"]
 
-[ext_resource type="Script" uid="uid://bymw2bwtwpwln" path="res://scripts/player/PlayerMovement.gd" id="1_rwgxs"]
+[ext_resource type="Script" uid="uid://bymw2bwtwpwln" path="res://scripts/player/movement/PlayerMovement.gd" id="1_rwgxs"]
 [ext_resource type="AudioStream" uid="uid://dgoth737rdi2o" path="res://sounds/player/footsteps/SnowyFootstep.wav" id="2_4wyf3"]
-[ext_resource type="PackedScene" uid="uid://cy7h25ck4p63x" path="res://models/weapons/ak/ArmsAK.glb" id="3_k0juu"]
-[ext_resource type="Script" uid="uid://bg4wah88c6nh2" path="res://scripts/player/WeaponSwitch.gd" id="5_71j4m"]
-[ext_resource type="PackedScene" uid="uid://gk5g5hxnbpf" path="res://models/weapons/pistol/ArmsPistol.glb" id="5_qfnet"]
-[ext_resource type="Script" uid="uid://cxqj4mpy23wjy" path="res://scripts/player/PlayerData.gd" id="6_qfnet"]
+[ext_resource type="PackedScene" uid="uid://l2wbgs6a4hhb" path="res://models/weapons/player/ak/ArmsAK.tscn" id="4_qfnet"]
+[ext_resource type="Script" uid="uid://bg4wah88c6nh2" path="res://scripts/player/weapons/WeaponSwitch.gd" id="5_71j4m"]
+[ext_resource type="PackedScene" uid="uid://uj8mauw5dbdt" path="res://models/weapons/player/pistol/ArmsPistol.tscn" id="5_i7141"]
+[ext_resource type="Script" uid="uid://cxqj4mpy23wjy" path="res://scripts/player/inventory-and-stats/PlayerData.gd" id="6_qfnet"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_go701"]
 
@@ -33,8 +33,8 @@ shape = SubResource("CapsuleShape3D_go701")
 
 [node name="WeaponSwitch" type="Node3D" parent="Player/Scripts"]
 script = ExtResource("5_71j4m")
-ak = ExtResource("3_k0juu")
-pistol = ExtResource("5_qfnet")
+ak = ExtResource("4_qfnet")
+pistol = ExtResource("5_i7141")
 
 [node name="PlayerData" type="Node3D" parent="Player/Scripts"]
 script = ExtResource("6_qfnet")

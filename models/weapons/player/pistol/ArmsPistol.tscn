@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://uj8mauw5dbdt"]
+
+[ext_resource type="PackedScene" uid="uid://gk5g5hxnbpf" path="res://models/glb/weapons/player/pistol/ArmsPistol.glb" id="1_cidn3"]
+
+[node name="Root Scene" instance=ExtResource("1_cidn3")]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="2"]

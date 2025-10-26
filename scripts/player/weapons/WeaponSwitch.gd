@@ -25,10 +25,10 @@ func equip_weapon(weapon_scene: PackedScene):
 	
 	# Przypisz odpowiedni skrypt
 	if weapon_scene == pistol:
-		var pistol_script = preload("res://scripts/player/WeaponPistol.gd")
+		var pistol_script = preload("res://scripts/player/weapons/WeaponPistol.gd")
 		weapon_instance.set_script(pistol_script)
 	elif weapon_scene == ak:
-		var ak_script = preload("res://scripts/player/WeaponAK.gd")
+		var ak_script = preload("res://scripts/player/weapons/WeaponAK.gd")
 		weapon_instance.set_script(ak_script)
 	
 	# Ustawienie pozycji (dostosuj dla każdej broni)
